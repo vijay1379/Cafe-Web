@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awsome file link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- css file link -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Responsive Restaurant Website</title>
+  </head>
+  <body>
+    <!-- header start -->
+    <header>
+      <a href="#" class="logo"><i class="fas fa-utensils"></i>Cafe.</a>
+      <nav class="navbar">
+        <a href="#home" class="active">home</a>
+        <a href="#dishes">dishes</a>
+        <a href="#about">about</a>
+        <a href="#menu">menu</a>
+        <a href="#review">review</a>
+        <a href="#order">order</a>
+      </nav>
+      <div class="icons">
+        <i class="fas fa-bars" id="menu-btn"></i>
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-shopping-cart" id="cart-btn"></i>
+        <i class="fas fa-heart" id="fav-btn"></i>
+        <i class="fas fa-user" id="profile-btn"></i>
+      </div>
+      <!-- search form -->
+      <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="search" />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <!-- sopping cart -->
+      <div class="shopping-cart">
+        <h2>Shopping Cart</h2>
+        <div class="cart-items">
+          <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-total">
+          <p>Total:<span id="cart-total">0.00</span></p>
+        </div>
+        <button class="btn checkout-btn" id="checkout-btn">Checkout</button>
+      </div>
+      
+      <div class="cart-popup">
+        <span id="cart-message">Added to Cart</span>
+      </div>
+      
+      <!-- favorite form -->
+      <form action="" class="fav-form">
+        <h3 class="head">favorite</h3>
+        <ul class="favorite-list">
+          <!-- Favorite items will be added here dynamically -->
+        </ul>
+      </form>
+
+
+      
+      <!-- Signup/Signin form -->
+      <div class="selection-form">
+        <div class="sign-up">
+        <button class="sign-up-btn"><h3>Sign  up</h3></button>
+      </div>
+      <div class="log-in">
+        <button class="log-in-btn" ><h3>Log in</h3></button>
+      </div>
+    </div>
+
+    </header>
+
+
+    <!-- header ends -->
+<!-- Login Section -->
+<div class="login-popup">
+  <div class="box">
+    <div class="img-area">
+      <div class="img">
+      </div>
+      <h1>Your Logo</h1>
+    </div>
+    <div class="form">
+      <div class="close-login">&times;</div>
+      <h1>Log In</h1>
+      <form id="login-form">
+        <div class="form-group">
+          <input type="email" placeholder="Email" class="form-control" id="login-email" required>
+          <p class="error-message" id="login-email-error"></p>
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control" id="login-password" required>
+          <p class="error-message" id="login-password-error"></p>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox">
+            Remember Me
+          </label>
+        </div>
+        <button type="button" class="btn" id="login-button">Log In</button>
+        <p class="error-message" id="login-error-message"></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Sign-up Section -->
+<div class="signup-popup">
+  <div class="box">
+    <div class="img-area">
+      <div class="img">
+      </div>
+      <h1>Your Logo</h1>
+    </div>
+    <div class="form">
+      <div class="close-signup">&times;</div>
+      <h1>Sign up</h1>
+      <form id="signup-form">
+        <div class="form-group">
+          <input type="text" placeholder="Name" class="form-control" id="signup-name" required>
+          <p class="error-message" id="signup-name-error"></p>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Email" class="form-control" id="signup-email" required>
+          <p class="error-message" id="signup-email-error"></p>
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control" id="signup-password" required>
+          <p class="error-message" id="signup-password-error"></p>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox">
+            Remember Me
+          </label>
+        </div>
+        <button type="button" class="btn" id="signup-button">Sign up</button>
+        <p class="error-message" id="signup-error-message"></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <!-- home section start -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>get foods by <span>easy</span> payment</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          iste commodi dignissimos nostrum repudiandae cupiditate autem impedit
+          quos facilis ad!
+        </p>
+        <a href="#order" class="btn">order now</a>
+      </div>
+    </section>
+
+
+    
+    <!-- home section ends -->
+
+    <!-- dish section start -->
+    <section class="dishes" id="dishes">
+      <h3 class="sub-heading">our dishes</h3>
+      <h1 class="heading">special <span>dishes</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <a class="fas fa-heart like-icon"></a>
+          <img src="img/dish-1.png" alt="" />
+          <h3 class="dish-name">Special Burger</h3>
+          <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+          </div>
+          <span class="dish-price">$5.99</span>
+          <button class="btn add-to-cart" data-dish="1">Add to Cart</button>
+      </div>
+        <div class="box">
+          <a class="fas fa-heart"></a>
+          <img src="img/dish-2.png" alt="" />
+          <h3 class="dish-name">Nuggets</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <span class="dish-price">$7.99 </span>
+          <button class="btn add-to-cart" data-dish="2">Add to Cart</button>
+        </div>
+        <div class="box">
+          <a class="fas fa-heart"></a>
+          <img src="img/dish-3.png" alt="" />
+          <h3 class="dish-name">Chicken</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <span class="dish-price">$10.99</span>
+          <button class="btn add-to-cart" data-dish="3">Add to Cart</button>
+        </div>
+        <div class="box">
+          <a class="fas fa-heart"></a>
+          <img src="img/dish-4.png" alt="" />
+          <h3 class="dish-name">Pizza</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <span class="dish-price">$4.99</span>
+          <button class="btn add-to-cart" data-dish="4">Add to Cart</button>
+        </div>
+        <div class="box">
+          <a class="fas fa-heart"></a>
+          <img src="img/dish-5.png" alt="" />
+          <h3 class="dish-name">Dessert</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <span class="dish-price">$5.40</span>
+          <button class="btn add-to-cart" data-dish="5">Add to Cart</button>
+        </div>
+        <div class="box">
+          <a class="fas fa-heart"></a>
+          <img src="img/dish-6.png" alt="" />
+          <h3 class="dish-name">Leg Piece</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <span class="dish-price">$2.99</span>
+          <button class="btn add-to-cart" data-dish="6">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+    <!-- dish section ends -->
+
+    
+
+    <!-- about section start -->
+    <section class="about" id="about">
+      <h3 class="sub-heading">about us</h3>
+      <h1 class="heading">why <span>choose us</span></h1>
+      <div class="row">
+        <div class="image">
+          <img src="img/about-img.png" alt="" />
+        </div>
+        <div class="content">
+          <h3>best food in the country</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
+            optio excepturi accusantium doloribus non cupiditate aliquid nam?
+            Voluptate atque perspiciatis eius provident ipsum ex quod non,
+            similique ratione ab ipsa non assumenda!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia
+            cumque assumenda vel laudantium nulla nisi.
+          </p>
+          <div class="icons-container">
+            <div class="icons">
+              <i class="fas fa-shipping-fast"></i>
+              <span>fast delivery</span>
+            </div>
+            <div class="icons">
+              <i class="fas fa-dollar-sign"></i>
+              <span>easy payment</span>
+            </div>
+            <div class="icons">
+              <i class="fas fa-headset"></i>
+              <span>24/7 service</span>
+            </div>
+          </div>
+          <a href="#" class="btn">learn more</a>
+        </div>
+      </div>
+      <!-- about section ends -->   
+      
+      <!-- menu section start -->
+      <section class="dishes" id="dishes">
+        <h3 class="sub-heading">our menu</h3>
+        <h1 class="heading">today's <span>speciality</span></h1>
+        <div class="box-container">
+          <div class="box">
+            <a class="fas fa-heart like-icon"></a>
+            <img src="img/menu-1.jpg" alt="" />
+            <h3 class="dish-name">Cappuccino</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>
+              Rich espresso, steamed milk, and frothy foam, a classic Italian delight.
+            </p>
+
+            <span class="dish-price">$5.99</span>
+            <button class="btn add-to-cart" data-dish="1">Add to Cart</button>
+        </div>
+          <div class="box">
+            <a class="fas fa-heart"></a>
+            <img src="img/menu-2.png" alt="" />
+            <h3 class="dish-name">Paneer Tikka</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>
+              Soft, grilled cottage cheese with aromatic Indian spices.
+            </p>
+            <span class="dish-price">$7.99 </span>
+            <button class="btn add-to-cart" data-dish="2">Add to Cart</button>
+          </div>
+          <div class="box">
+            <a class="fas fa-heart"></a>
+            <img src="img/menu-3.jpg" alt="" />
+            <h3 class="dish-name">Masala Chai</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>
+              Spiced black tea in warm milk, a fragrant Indian favorite.
+            </p>
+            <span class="dish-price">$10.99</span>
+            <button class="btn add-to-cart" data-dish="3">Add to Cart</button>
+          </div>
+          <div class="box">
+            <a class="fas fa-heart"></a>
+            <img src="img/menu-4.jpg" alt="" />
+            <h3 class="dish-name">Desi Samosa</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>
+              Crispy pastry, savory potato and pea filling, with tamarind dip.
+            </p>
+            <span class="dish-price">$4.99</span>
+            <button class="btn add-to-cart" data-dish="4">Add to Cart</button>
+          </div>
+          <div class="box">
+            <a class="fas fa-heart"></a>
+            <img src="img/menu-5.jpg" alt="" />
+            <h3 class="dish-name">Eggs Benedict</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>
+              Poached eggs, ham, and hollandaise sauce on an English muffin.
+            </p>
+            <span class="dish-price">$5.40</span>
+            <button class="btn add-to-cart" data-dish="5">Add to Cart</button>
+          </div>
+          <div class="box">
+            <a class="fas fa-heart"></a>
+            <img src="img/menu-6.jpg" alt="" />
+            <h3 class="dish-name">Chocolate Brownie</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>
+              A decadent chocolate dessert, moist, and rich with cocoa.
+            </p>
+            <span class="dish-price">$2.99</span>
+            <button class="btn add-to-cart" data-dish="6">Add to Cart</button>
+          </div>
+          <div class="box">
+            <a class="fas fa-heart"></a>
+            <img src="img/menu-7.png" alt="" />
+            <h3 class="dish-name">Mango Lassi</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>
+              Creamy yogurt, sweet mango, a refreshing and delightful drink.
+            </p>
+            <span class="dish-price">$2.99</span>
+            <button class="btn add-to-cart" data-dish="6">Add to Cart</button>
+          </div>
+          <div class="box">
+            <a class="fas fa-heart"></a>
+            <img src="img/menu-8.png" alt="" />
+            <h3 class="dish-name">Caprese Sandwich</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>
+              Fresh mozzarella, tomatoes, and basil on toasted ciabatta.
+            </p>
+            <span class="dish-price">$2.99</span>
+            <button class="btn add-to-cart" data-dish="6">Add to Cart</button>
+          </div>
+          <div class="box">
+            <a class="fas fa-heart"></a>
+            <img src="img/menu-9.jpg" alt="" />
+            <h3 class="dish-name">Blueberry Pancakes</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>
+              Fluffy pancakes with blueberries, maple syrup, and a dollop of butter.
+            </p>
+            <span class="dish-price">$2.99</span>
+            <button class="btn add-to-cart" data-dish="6">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+
+
+
+    <!-- menu section ends -->
+
+    <!-- review section start -->
+    <section class="review" id="review">
+      <h1 class="heading">our customers <span>reviews</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <img src="img/pic-1.png" alt="" />
+          <h3>john deo</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim,
+            distinctio aut eos harum sapiente repellendus odio. Deleniti dolorum
+            assumenda itaque!
+          </p>
+        </div>
+        <div class="box">
+          <img src="img/pic-2.png" alt="" />
+          <h3>john deo</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim,
+            distinctio aut eos harum sapiente repellendus odio. Deleniti dolorum
+            assumenda itaque!
+          </p>
+        </div>
+        <div class="box">
+          <img src="img/pic-3.png" alt="" />
+          <h3>john deo</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim,
+            distinctio aut eos harum sapiente repellendus odio. Deleniti dolorum
+            assumenda itaque!
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- review section ends -->
+
+    <!-- order section start -->
+    <section class="order" id="order">
+      <h1 class="heading"><span>order</span> now</h1>
+      <div class="row">
+        <div class="image">
+          <img src="img/waiter.jpg" alt="" />
+        </div>
+        <form action="">
+          <div class="inputBox">
+            <input type="tel" placeholder="Phone Number" required />
+            <input type="text" placeholder="Land Mark" required />
+          </div>
+          <textarea
+            placeholder="Address"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input type="submit" value="order now" class="btn" />
+        </form>
+      </div>
+    </section>
+    <!-- order section ends -->
+
+    <!-- footer start -->
+    <footer class="footer" id="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>loaction</h3>
+          <a href="#">canada</a>
+          <a href="#">usa</a>
+          <a href="#">japan</a>
+          <a href="#">france</a>
+          <a href="#">russia</a>
+        </div>
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#home">home</a>
+          <a href="#dishes">dishes</a>
+          <a href="#about">about</a>
+          <a href="#menu">menu</a>
+          <a href="#review">review</a>
+          <a href="#order">order</a>
+        </div>
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#">+5555 555 555</a>
+          <a href="#">+5555 555 555</a>
+          <a href="#">+5555 555 555</a>
+          <a href="#">example@gmail.com</a>
+          <a href="#">example@gmail.com</a>
+        </div>
+        <div class="box">
+          <h3>follow us</h3>
+          <a href="#">facebook</a>
+          <a href="#">twitter</a>
+          <a href="#">intagram</a>
+          <a href="#">linkedin</a>
+        </div>
+      </div>
+      <div class="credit">
+        ©copyright @ 2021 designed by: <span>coding source</span>
+      </div>
+    </footer>
+    <!-- footer ends -->
+
+    <!-- scroll btn -->
+    <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+
+    <!-- js file link -->
+    <script src="script.js"></script>
+  </body>
+</html>
